@@ -1,10 +1,5 @@
-@font-face {
-    font-family: fontopo-subway; 
-    src: url('./Fonts/fontopoSUBWAY-Regular.ttf');
- } 
-
 h1, h3, p {
-    font-family: fontop-subway;
+    font-family: 'Audiowide', cursive;
 }
 
 #trainSchedule {
@@ -17,4 +12,9 @@ h1, h3, p {
 #trainForm {
     height: 400px;
     border: 2px solid black;
+}
+
+#addTrain {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
