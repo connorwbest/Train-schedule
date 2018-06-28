@@ -1,0 +1,15 @@
+h1, h3, p {
+    font-family: 'Oswald', sans-serif;
+}
+
+#trainSchedule {
+    height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    border: 2px solid black;
+}
+
+#trainForm {
+    height: 400px;
+    border: 2px solid black;
+}
