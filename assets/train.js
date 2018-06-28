@@ -30,6 +30,7 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+
         trainName = $('#trainName').val().trim();
         destination = $('#trainDestination').val().trim();
         trainDepart = $('#trainFirstTime').val().trim();
@@ -47,19 +48,23 @@ $(document).ready(function () {
 
     //When a new child is added to database, create table row with appropriate values
     database.ref().on('child_added', function (snap) {
+        
 
+        //current time
+        var currTime = moment();
         // converts departTime to unix
-        var departTime = moment(snap.val().depart, 'HH:mm').format('X');
+        var departTime = moment(snap.val().depart, 'HH:mm Z').format();
         // stores the frequency in a variable
         var freq = snap.val().frequency;
         // calculates the difference between the departTime and the current time
-        var difference = moment().diff(moment.unix(departTime), "minutes");
+        var difference = moment().diff(moment(departTime), "minutes");
         // calculates the times the train has arrived from first to now
-        var timeLeft = moment().diff(moment.unix(departTime), 'minutes') % freq;
+        var timeLeft = moment().diff(moment(departTime), 'minutes') % freq;
         // calculates the amount of minutes left
         var mins = moment(freq - timeLeft, "mm").format('mm');
         // addes minutes to last arrival for next arrival
-        var nextTrain = moment().add(mins, "m").format("hh:mm ");
+        var nextTrain = moment().add(mins, "m").format("hh:mm");
+
 
         var train = $('<tr>');
 
@@ -78,6 +83,11 @@ $(document).ready(function () {
         train.append(name).append(destination).append(frequency).append(arrival).append(untilArrival);
 
         $('tbody').append(train);
+
+        console.log(currTime);
+        console.log(departTime);
+        console.log(difference);
+        console.log(timeLeft);
 
 
     })

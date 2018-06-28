@@ -1,5 +1,10 @@
+@font-face {
+    font-family: fontopo-subway; 
+    src: url('./Fonts/fontopoSUBWAY-Regular.ttf');
+ } 
+
 h1, h3, p {
-    font-family: 'Oswald', sans-serif;
+    font-family: fontop-subway;
 }
 
 #trainSchedule {
