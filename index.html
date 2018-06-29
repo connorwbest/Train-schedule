@@ -17,7 +17,7 @@
 
 <body>
     <!--Header for Page-->
-    <div class="jumbotron">
+    <div class="jumbotron" id="header">
         <h1 class="display-4 text-center">Tokyo Metro</h1>
         <p class="lead text-center">Powered by Firebase</p>
     </div>
@@ -61,11 +61,11 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Train Name</label>
-                            <input type="text" class="form-control" id="trainName" placeholder="Polar Express">
+                            <input type="text" class="form-control" id="trainName">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Destination</label>
-                            <input type="text" class="form-control" id="trainDestination" placeholder="North Pole">
+                            <input type="text" class="form-control" id="trainDestination">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">First Train Time (HH:mm -military time)</label>
@@ -73,9 +73,9 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Frequency (min)</label>
-                            <input type="number" class="form-control" id="trainFrequency" placeholder="525600">
+                            <input type="number" class="form-control" id="trainFrequency" placeholder="35">
                         </div>
-                        <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="submitBtn" class="btn btn-primary">Add Train</button>
                     </form>
                 </div>
             </div>

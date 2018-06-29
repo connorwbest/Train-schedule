@@ -1,12 +1,14 @@
-h1, h3, p {
+h1, p {
     font-family: 'Audiowide', cursive;
+    color: white;
 }
 
 #trainSchedule {
     height: 500px;
     max-height: 500px;
     overflow-y: scroll;
-    border: 2px solid black;
+    border: 2px solid white;
+    background-color: black;
 }
 
 #trainForm {
@@ -17,4 +19,42 @@ h1, h3, p {
 #addTrain {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+td, th, h3 {
+    font-family: 'VT323', monospace;
+    color: #FF8800;
+}
+
+body {
+    background-image: url(./Images/trainschedbackground1.jpg);
+    background-size: 1024px 100%;
+}
+
+#header {
+    background-color: #263238;
+}
+
+.display-4 {
+    color: white;
+}
+
+.lead {
+    color: white;
+}
+
+form {
+    padding: 10px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+label {
+    color: #FF8800;
+}
+
+#submitBtn {
+    color: white;
+    background-color: #FF8800;
+    border: 1px solid white;
 }
